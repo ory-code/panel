@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import NewProduct from "./Pages/NewProduct";
+import NewUser from "./Pages/NewUser";
 import Product from "./Pages/Product";
 import Products from "./Pages/Products";
 import User from "./Pages/User";
@@ -23,6 +24,7 @@ function App() {
             <Route path="users">
               <Route index element={<Users />} />
               <Route path=":userId" element={<User />} />
+              <Route path="new" element={<NewUser />} />
             </Route>
           </Route>
         </Routes>
@@ -32,4 +34,3 @@ function App() {
 }
 
 export default App;
-

@@ -1,6 +1,9 @@
 .sidebar {
   border-right: 0.8px solid rgba(211, 211, 211, 0.383);
   flex: 1;
+  .link {
+    text-decoration: none;
+  }
   .top {
     border-bottom: 0.8px solid rgba(211, 211, 211, 0.877);
     display: flex;

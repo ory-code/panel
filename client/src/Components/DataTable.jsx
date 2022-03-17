@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const DataTable = () => {
   const [data, setData] = useState(userRows);
-
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
@@ -17,19 +16,21 @@ const DataTable = () => {
       headerName: "Action",
       width: 200,
       renderCell: (params) => {
+        console.log(params);
         return (
           <div className="cellAction">
-            <Link to="/users/test" style={{ textDecoration: "none" }}>
+            <Link to={`/users/${params.id}`} style={{ textDecoration: "none" }}>
               <div className="viewButton">View</div>
             </Link>
             <div
               className="deleteButton"
-              onClick={() => handleDelete(params.row.id)}
+              onClick={() => handleDelete(params.id)}
             >
               Delete
             </div>
           </div>
         );
+        
       },
     },
   ];
