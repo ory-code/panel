@@ -8,9 +8,15 @@ import Product from "./Pages/Product";
 import Products from "./Pages/Products";
 import User from "./Pages/User";
 import Users from "./Pages/Users";
+import "../src/Style/Layout/Dark.scss"
+import { useContext } from "react";
+import { DarkModeContext } from "./Context/DarkModeContext";
 function App() {
+
+  const {darkMode} = useContext(DarkModeContext)
+  
   return (
-    <div className="App">
+    <div className={darkMode ? "App dark" : "App"}>
       <BrowserRouter>
         <Routes>
           <Route path="/">

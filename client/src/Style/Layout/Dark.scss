@@ -1,0 +1,54 @@
+.App.dark {
+  background-color: black;
+  color: rgb(156, 156, 156);
+
+  .chartGrid {
+    stroke: rgb(228, 228, 228, 0.219);
+  }
+  .dataTable {
+      .dataGrid {
+        color: rgb(180, 180, 180);
+.viewButton, .deleteButton {
+    color: gray;
+    border: none;
+}
+      }
+  }
+  .table {
+    background-color: black;
+    .tableCell {
+      color: rgb(156, 156, 156);
+    }
+  }
+
+  .sidebar {
+    .center {
+      .icon {
+        color: rgb(156, 156, 156);
+      }
+      span {
+        color: rgb(156, 156, 156);
+      }
+    }
+  }
+  .navbar {
+    border-color: rgb(156, 156, 156);
+    .search {
+      color: rgb(156, 156, 156);
+      input {
+        color: rgb(156, 156, 156);
+      }
+    }
+    .items {
+      .item {
+        .icn {
+          color: rgb(195, 194, 194);
+        }
+      }
+      
+    }
+  }
+  input {
+      background-color: transparent
+  }
+}

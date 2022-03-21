@@ -1,5 +1,5 @@
-import React from "react";
-import logo from "../assets/logo-gif.gif";
+import React, { useContext } from "react";
+import logo from "../assets/like.png";
 import { Link } from "react-router-dom";
 import "../Style/Components/SideBar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -12,7 +12,10 @@ import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutIcon from "@mui/icons-material/Logout";
+import { DarkModeContext } from "../Context/DarkModeContext";
+
 const SideBar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="top">
@@ -73,26 +76,17 @@ const SideBar = () => {
             <LogoutIcon className="icon" />
             <span>Logout</span>
           </li>
-          {/* <li>
-            <span>Dashboard</span>
-          </li>
-          <li>
-            <span>Dashboard</span>
-          </li>
-          <li>
-            <span>Dashboard</span>
-          </li>
-          <li>
-            <span>Dashboard</span>
-          </li>
-          <li>
-            <span>Dashboard</span>
-          </li> */}
         </ul>
       </div>
       <div className="bottom">
-        <div className="color__options"></div>
-        <div className="color__options"></div>
+        <div
+          className="color__options"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        ></div>
+        <div
+          className="color__options"
+          onClick={() => dispatch({ type: "DARK" })}
+        ></div>
       </div>
     </div>
   );

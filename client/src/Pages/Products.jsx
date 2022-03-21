@@ -26,7 +26,7 @@ const Products = () => {
         <h1>The Store </h1>
         </div>
         <div className="middle">
-          🏬 
+         <datalist/>
         </div>
         <div className="bottom"></div>
       </div>
